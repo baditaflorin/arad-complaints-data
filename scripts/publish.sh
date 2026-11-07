@@ -25,9 +25,10 @@ else
 fi
 git push -u origin main
 if [[ "${1:-}" == "--pages" ]]; then
-  if ! gh api "repos/$target/pages" >/dev/null 2>&1; then
-    gh api --method POST "repos/$target/pages" -f build_type=workflow
-  fi
-  gh workflow run pages.yml --repo "$target" --ref main
-  printf 'Pages deployment requested; verify with: gh run list --repo %s --workflow pages.yml\n' "$target"
+  pages_method=POST
+  if gh api "repos/$target/pages" >/dev/null 2>&1; then pages_method=PUT; fi
+  gh api --method "$pages_method" "repos/$target/pages" --input - <<'JSON'
+{"build_type":"legacy","source":{"branch":"main","path":"/docs"}}
+JSON
+  printf 'Pages publication requested from main:/docs; verify: https://%s.github.io/%s/\n' "$owner" "$repo_name"
 fi

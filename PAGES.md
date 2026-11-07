@@ -27,13 +27,16 @@ bash scripts/publish.sh --pages  # în plus, activează/publică site-ul public
 ```
 
 Alternativ, creează repository-ul public în interfața GitHub, încarcă proiectul,
-selectează **Settings → Pages → Source: GitHub Actions**, apoi rulează workflow-ul
-**Publish GitHub Pages** din **Actions**. Nu există publicare automată sau
-reextragere programată: workflow-ul Pages pornește manual.
+selectează **Settings → Pages → Source: Deploy from a branch**, apoi **main** și
+**/docs** și apasă **Save**. Fișierele deja construite din `docs/` se publică
+prin mecanismul standard GitHub Pages. După modificarea datelor, rulează din nou
+`python scripts/build_site.py` și comite atât datele, cât și `docs/`.
 
-URL-urile `https://baditaflorin.github.io/<repo>/` din exemple sunt destinațiile
-pregătite pentru publicare; ele nu reprezintă dovada că site-ul este deja activ.
-Verifică succesul deployment-ului și un download înainte să distribui linkul.
+Workflow-ul opțional `Publish GitHub Pages` din `Actions` rămâne disponibil
+pentru cazul în care alegi explicit sursa **GitHub Actions**. Nu există
+reextragere programată a datelor.
+
+Portal public: https://baditaflorin.github.io/arad-complaints-data/
 
 ## Exemple
 

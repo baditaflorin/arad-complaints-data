@@ -1,5 +1,9 @@
 # Arad — sesizări publice MyArad
 
+## Portal public
+
+[Site, hartă și descărcări CSV / JSON / GeoJSON](https://baditaflorin.github.io/arad-complaints-data/)
+
 Date gata de descărcat și cod pentru reproducerea unei proiecții a hărții publice
 de sesizări a Primăriei Municipiului Arad. Datele includ coordonatele originale ale
 marcajelor; nu au fost inventate coordonate și nu a fost necesară geocodarea.
