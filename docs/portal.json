@@ -1,0 +1,150 @@
+{
+  "title": "Sesizări Arad",
+  "subtitle": "Sesizări din harta publică MyArad",
+  "dataset": "sesizari",
+  "repo": "arad-complaints-data",
+  "owner": "baditaflorin",
+  "count": 60,
+  "geometry_count": 60,
+  "metadata": {
+    "dataset": "arad-complaints",
+    "title": "Sesizări publice MyArad — proiecție fără text liber",
+    "description": "Instantaneu al sesizărilor afișate de API-ul hărții publice MyArad, cu câmpuri strict selectate și coordonatele originale.",
+    "generated_at": "2026-11-07T14:45:37Z",
+    "record_count": 60,
+    "geocoded_count": 60,
+    "source_coordinate_count": 60,
+    "externally_geocoded_count": 0,
+    "missing_coordinate_count": 0,
+    "status": "ok",
+    "license": "Upstream reuse licence not identified; MIT applies to code only.",
+    "code_license": "MIT",
+    "source_urls": [
+      "https://myarad.primariaarad.ro/dm_arad/servicii.nsf/pagini/sesizari%2Bonline%2Bpe%2Bharta",
+      "https://myarad.primariaarad.ro/dm_arad/ext_services.nsf/xsp/.jaxrs/myCity/getAll",
+      "https://myarad.primariaarad.ro/dm_arad/servicii.nsf/sobis.mycity.js?Open",
+      "https://myarad.primariaarad.ro/dm_arad/servicii.nsf/sobis.utils.js?Open"
+    ],
+    "source_url": "https://myarad.primariaarad.ro/dm_arad/ext_services.nsf/xsp/.jaxrs/myCity/getAll?_dc=1794062729.6866813",
+    "source_sha256": "4f4ca20034fd40c2038234e9e7dfe9800a2c77272a18909b80ca8c7d3885c3b6",
+    "scope": "Public GET myCity/getAll snapshot only; not an archive of all submitted complaints.",
+    "coverage_start": "2025-07-06",
+    "coverage_end": "2026-11-07",
+    "bbox": [
+      21.2617,
+      46.1317,
+      21.3663,
+      46.2104
+    ],
+    "crs": "EPSG:4326",
+    "geojson_coordinate_order": "longitude, latitude",
+    "categories": {
+      "Altele": 5,
+      "Iluminat stradal": 3,
+      "Lucrari edilitare in desfasurare": 2,
+      "Masini abandonate sau parcate neregulamentar": 9,
+      "Ordine publica": 2,
+      "Parcari rezidentiale": 1,
+      "Probleme carosabil/trotuare/asfaltare": 19,
+      "Probleme de mediu": 1,
+      "Salubrizare stradala": 3,
+      "Semnalizare rutiera": 4,
+      "Spatii verzi/parcuri": 2,
+      "Toaletare copaci, intretinere gard viu": 8,
+      "Transport public": 1
+    },
+    "statuses": {
+      "In asteptare": 2,
+      "Preluata": 44,
+      "Solutionata": 14
+    },
+    "privacy": {
+      "strategy": "Allowlist structured fields; omit all message/reply text and all attachments.",
+      "excluded_fields": [
+        "mesaj",
+        "raspuns",
+        "createdText",
+        "marker",
+        "culoare",
+        "reporter names",
+        "email",
+        "phone",
+        "attachments"
+      ],
+      "name_field": "Generated solely from the controlled category, not the original complaint text."
+    },
+    "limitations": [
+      "Records present in the public map feed only; no completeness claim about historical submissions.",
+      "Original map positions are unverified reported locations, not surveyed coordinates.",
+      "Missing or malformed positions remain null. No city centroid or guessed address is substituted.",
+      "An older official strategy described 30-day unresolved and 5-day resolved display windows; this snapshot contains older dates, so those windows are not assumed to be currently enforced.",
+      "No freely reusable upstream data licence was identified. Public accessibility alone does not establish redistribution rights."
+    ],
+    "source_details": {
+      "source_total": 60,
+      "snapshot_complete_relative_to_feed_total": true,
+      "unknown_categories_replaced": 0,
+      "unknown_statuses_replaced": 0,
+      "category_count": 19,
+      "categories": [
+        "Altele",
+        "Caini comunitari",
+        "Canalizare pluviala",
+        "Deszapezire",
+        "Iluminat stradal",
+        "Locuri de joaca",
+        "Lucrari edilitare in desfasurare",
+        "Masini abandonate sau parcate neregulamentar",
+        "Ordine publica",
+        "Parcari publice",
+        "Parcari rezidentiale",
+        "Probleme carosabil/trotuare/asfaltare",
+        "Probleme de mediu",
+        "Salubrizare menajera",
+        "Salubrizare stradala",
+        "Semnalizare rutiera",
+        "Spatii verzi/parcuri",
+        "Toaletare copaci, intretinere gard viu",
+        "Transport public"
+      ]
+    }
+  },
+  "files": [
+    {
+      "name": "metadata.json",
+      "path": "data/metadata.json",
+      "bytes": 3874,
+      "sha256": "e24e79d624a083c8ad36c5ae3cefb4c45d9458c9969cf027640fae2dfa664ff7"
+    },
+    {
+      "name": "records.csv",
+      "path": "data/records.csv",
+      "bytes": 36378,
+      "sha256": "030d5f6399805805afe5436d3445ae29bbc7411e7c030deb78797fc8ce7672cd"
+    },
+    {
+      "name": "records.geojson",
+      "path": "data/records.geojson",
+      "bytes": 73526,
+      "sha256": "eea93675ffa8ef231fe0b596ced7934e03ba332eaff6d1321268264176dc2b0a"
+    },
+    {
+      "name": "records.json",
+      "path": "data/records.json",
+      "bytes": 56866,
+      "sha256": "39cdaef76ad01cee1f313c92e6df80a2278e0ba771e5077346faea4ce5a647e0"
+    },
+    {
+      "name": "schema.json",
+      "path": "data/schema.json",
+      "bytes": 1557,
+      "sha256": "96a30ed93a7e2929e4c13d4c75db1a026777d52a011988165da364cba445ece4"
+    },
+    {
+      "name": "source-snapshot.sanitized.json",
+      "path": "data/source-snapshot.sanitized.json",
+      "bytes": 13928,
+      "sha256": "3c1438075b9890dca4d2ebd5ae7b811c8c2a4e62febcb3a5c9830aacc5b32401"
+    }
+  ]
+}

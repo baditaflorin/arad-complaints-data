@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MyArad privacy-safe records",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "source_id",
+      "record_type",
+      "name",
+      "category",
+      "status",
+      "submitted_at",
+      "latitude",
+      "longitude",
+      "coordinate_source",
+      "coordinate_precision",
+      "geocode_method",
+      "source_url",
+      "source_page",
+      "source_sha256",
+      "retrieved_at"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "source_id": {
+        "type": "string"
+      },
+      "record_type": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "submitted_at": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "longitude": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coordinate_source": {
+        "type": "string"
+      },
+      "coordinate_precision": {
+        "type": "string"
+      },
+      "geocode_method": {
+        "type": "string"
+      },
+      "source_url": {
+        "type": "string"
+      },
+      "source_page": {
+        "type": "string"
+      },
+      "source_sha256": {
+        "type": "string"
+      },
+      "retrieved_at": {
+        "type": "string"
+      }
+    }
+  }
+}

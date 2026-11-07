@@ -1,0 +1,24 @@
+name: Validate data and parsers
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies when present
+        run: |
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
+      - name: Parser tests
+        run: python -m unittest discover -s tests -v
+      - name: Build and check exports
+        run: |
+          python scripts/build_site.py
+          python scripts/validate_exports.py
